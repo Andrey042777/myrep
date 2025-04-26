@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт</title>
+    <script>
+
+        const tanks = [
+            { name: 'Tank Panzer', speed: 32, armor: 720 },
+            { name: 'Tank T-34', speed: 40, armor: 480 },
+            { name: 'Tank ИC-48', speed: 45, armor: 850}
+
+        ];
+
+        for (let i = 0; i < tanks.length; i++) {
+            tanks[i].speed = tanks[i].speed + 10;
+        }
+        let i = 0;
+        let j = 0;
+        while (i < tanks.length) {
+            console.log("**********");
+            console.log(tanks[i].name);
+            while (tanks[i].armor > 50) {
+                tanks[i].armor -= 5;
+                console.log("- "+tanks[i].armor);
+                j++;
+            }
+            
+            console.log(tanks[i].name + ' Выстрелов ' + j);
+            console.log(" Armor " + tanks[i].armor);
+            j = 0;
+            i++;
+        }
+
+        console.log(tanks)
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт</title>
+    <script>
+        let German = {
+            name: "Panzer",
+            health: 220,
+            armor: 45
+        };
+        let SovietUnion = {
+            name: "ИС-68",
+            health: 85,
+            armor: 95
+        };
+        function attack(attaker, defender, attackPower) {
+            console.log(attaker.name + " атакует " + defender.name + " с силой " + attackPower);
+            let damage = attackPower - defender.armor;
+            if (damage < 0) {
+                damage = 0;
+            }
+            console.log(defender.name + " теряет " + damage + " здоровья!");
+            defender.health -= damage;
+            if (defender.health <= 0) {
+                console.log(defender.name + " уничтожен! БУМ 💥");
+            }
+            else {
+                console.log(defender.name + " теперь имеет " + defender.health +" здоровья.");
+            }
+        }
+        function desplay(tank) {
+            console.log('Танк ' + tank.name + ': здоровье ' + tank.health + ': броня ' + tank.armor);
+        }
+        desplay(German);
+        desplay(SovietUnion);
+        attack(German, SovietUnion, 120);
+        attack(SovietUnion, German, 500);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

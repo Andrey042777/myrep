@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О коровах</title>
+    
+</head>
+<body>
+    <p>Что-то про коров</p>
+    <script>
+        // let t = document.title;
+        // console.log(t)
+        // let bodyText = document.body.textContent;
+        // console.log(bodyText);
+        // document.body.style.background = 'red';
+        let e = document.querySelector('p')
+        console.log(e.textContent);
+        e.textContent = "У лосей выпадают рога"
+        console.log(e.textContent);
+        let newP = document.createElement('p');
+        newP.textContent = 'Это новый параграф'
+        document.body.appendChild(newP);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #canvas {
+        background-color: rgb(223, 145, 44);
+    }
+</style>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+    <script>
+        let canvas = document.querySelector('#canvas');
+        let ctx = canvas.getContext("2d")
+        ctx.strokeStyle = 'red';
+        ctx.beginPath();
+        ctx.moveTo(50,50)
+        ctx.lineTo(150,50)
+        ctx.lineTo(150,150)
+        ctx.lineTo(50,150)
+        ctx.lineTo(50,50)
+        ctx.lineTo(100,100)
+        ctx.moveTo(200,100)
+        ctx.lineTo(150,50)
+        ctx.moveTo(200,200)
+        ctx.lineTo(150,150)
+        ctx.moveTo(100,200)
+        ctx.lineTo(50,150)
+        ctx.closePath()
+        ctx.stroke();
+
+        ctx.strokeRect(100,100,100,100)
+        // ctx.closePath()
+
+    </script>
+</body>
+</html>
